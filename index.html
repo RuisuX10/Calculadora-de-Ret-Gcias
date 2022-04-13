@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<title>Retenciones</title>
+</head>
+<body>
+	<div id="formulario" method="post">
+		<h1>SISTEMA DE CALCULO DE RETENCIONES<br>DE IMPUESTOS A LAS GANANCIAS</h1>
+		<div>
+			<p>Concepto</p>
+			<select id="concepto">
+				<option value="1">Compra de bienes muebles</option>
+				<option value="2">Servicios</option>
+				<option value="3">Alquileres</option>
+			</select>
+		</div>
+		<br>
+		
+			<p>¿Hubo retenciones durante el mes?</p>
+			<select id="retAnt"> 
+				<option value="1">No</option>
+				<option value="2">Si</option>
+			</select>	
+	
+		<br>
+			
+		
+		<label>Neto  Comprobante</label>
+		<input type="number" name="" id="neto" step="0.01" placeholder="Ingresa el importe neto">
+		<p class="warning">Si se realizaron pagos anteriormente pero no retenciones,<br> debe ir el neto total (netos pagados - neto actual)</p>
+	<!-- 	<button onclick="limpiar();">Limpiar</button> -->
+		<br>
+		<label>Total Comprobante</label>
+		<input type="number" name="" id="totalComp" step="0.01" placeholder="Ingresa el monto total">
+		<br>
+		<button onclick="ret();" >Calcular Retencion</button>
+		<br>
+		<div class="resultado">
+			<p>La Retencion es:  $ <span id="reten"></span></p>
+			<p>El importe a pagar es de: $ <span id="aPagar"></span></p>
+		</div>
+		
+		<footer>Creado por Escobar Rolando Luis</footer>
+	</div>
+	<script type="text/javascript" src="codigo.js"></script>
+
+</body>
+</html>
